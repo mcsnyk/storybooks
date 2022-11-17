@@ -29,7 +29,3 @@ jobs:
 
     - name: Snyk Code Scanning
       run: snyk code test --org=9b15d7f2-b8cd-487c-8020-4284a20c5825
-
-#     - name: Snyk Open Source Scanning
-#       run: snyk monitor
-#       continue-on-error: true
