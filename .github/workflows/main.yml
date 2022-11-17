@@ -27,7 +27,7 @@ jobs:
       
     - run: snyk auth ${{ secrets.SNYK_TOKEN2 }}
     - name: Snyk Code Scanning
-      run: snyk code test
+      run: snyk code test --org=9b15d7f2-b8cd-487c-8020-4284a20c5825
       continue-on-error: true
 
 #     - name: Snyk Open Source Scanning
