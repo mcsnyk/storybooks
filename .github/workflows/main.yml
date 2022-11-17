@@ -25,8 +25,11 @@ jobs:
     # Install & prepare Snyk
     - run: npm install --location=global snyk
       
-    - run: snyk auth ${{ secrets.SNYK_TOKEN }}
-
-    - name: Snyk Open Source Scanning
-      run: snyk monitor
+    - run: snyk auth ${{ secrets.SNYK_TOKEN2 }}
+    - name: Snyk Code Scanning
+      run: snyk code test
       continue-on-error: true
+
+#     - name: Snyk Open Source Scanning
+#       run: snyk monitor
+#       continue-on-error: true
