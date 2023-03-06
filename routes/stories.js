@@ -21,12 +21,12 @@ const Story = require('../models/Story')
 
 // or
 // M -  Use of Password Hash With Insufficient Computational Effort:
-// exports.ctfFlag = text => {
-//   const shaObj = new jsSHA('SHA-1', 'TEXT') // eslint-disable-line new-cap
-//   shaObj.setHMACKey(ctfKey, 'TEXT')
-//   shaObj.update(text)
-//   return shaObj.getHMAC('HEX')
-// }
+exports.ctfFlag = text => {
+  const shaObj = new jsSHA('SHA-1', 'TEXT') // eslint-disable-line new-cap
+  shaObj.setHMACKey(ctfKey, 'TEXT')
+  shaObj.update(text)
+  return shaObj.getHMAC('HEX')
+}
 
 // or
 // H - Hardcoded Secret:
