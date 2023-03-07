@@ -37,16 +37,16 @@ const Story = require('../models/Story')
 //   return hmac.update(email + this.roles.deluxe).digest('hex')
 // }
 
-exports.sequelizeVulnerabilityChallenge = () => (req, res) => {
-  models.Recycle.findAll({
-    where: {
-      id: JSON.parse(req.params.id)
-    }
-  }).then((Recycle) => {
-    return res.send(utils.queryResultToJson(Recycle))
-  })
-}
-
+// M - PromiseNotCaughtNode, Quality Vuln
+// exports.sequelizeVulnerabilityChallenge = () => (req, res) => {
+//   models.Recycle.findAll({
+//     where: {
+//       id: JSON.parse(req.params.id)
+//     }
+//   }).then((Recycle) => {
+//     return res.send(utils.queryResultToJson(Recycle))
+//   })
+// }
 
 
 // @desc    Show add page
