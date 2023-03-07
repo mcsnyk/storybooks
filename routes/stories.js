@@ -38,15 +38,15 @@ const Story = require('../models/Story')
 // }
 
 // M - PromiseNotCaughtNode, Quality Vuln
-// exports.sequelizeVulnerabilityChallenge = () => (req, res) => {
-//   models.Recycle.findAll({
-//     where: {
-//       id: JSON.parse(req.params.id)
-//     }
-//   }).then((Recycle) => {
-//     return res.send(utils.queryResultToJson(Recycle))
-//   })
-// }
+exports.sequelizeVulnerabilityChallenge = () => (req, res) => {
+  models.Recycle.findAll({
+    where: {
+      id: JSON.parse(req.params.id)
+    }
+  }).then((Recycle) => {
+    return res.send(utils.queryResultToJson(Recycle))
+  })
+}
 
 
 // @desc    Show add page
