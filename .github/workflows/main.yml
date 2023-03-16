@@ -29,8 +29,8 @@ jobs:
     
     - name: Snyk Container # Rename your image, for testing and failing please add snyk container test before snyk container monitor
       run: |
-        docker build . -t mcsnyk/storybooks:2
-        snyk container monitor mcsnyk/storybooks:2 --org=b6553a7e-9051-43aa-8bf7-3437e1918e04
+        docker build . -t storybooks:latest
+        snyk container monitor mcsnyk/storybooks:latest --org=b6553a7e-9051-43aa-8bf7-3437e1918e04
 
 #     - name: Snyk Code Scanning
 #       run: snyk code test --org=b6553a7e-9051-43aa-8bf7-3437e1918e04
